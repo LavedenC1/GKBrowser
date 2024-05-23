@@ -19,6 +19,16 @@
         uiframe.style.border = "0px"
         uiframe.style.margin = "0px"
         uiframe.style.padding = "0px"
+
+
+        var button = document.createElement('button');
+        button.setAttribute('onclick', 'changeURL();'); // Use addEventListener to attach a click event listener
+        document.body.appendChild(button);
+  
+      }
+      function changeURL(){
+        var newURL = prompt('Enter your new url',"https://bing.com")
+        uiframe.src = newURL;
       }
     </script>
   </head>
@@ -27,14 +37,17 @@
     <p>GoGuardian won't block it!</p>
     <p>First Enter Chrome, and turn off the WiFi, and type this in the url: chrome://restart</p>
     <p>Your browser will restart and that is normal, now go to this page and wait a few seconds</p>
-    <p>Then try to reload the page, if it gives you a warning, it worked! Press Cancel and carry on!</p>
-    <p>Turn the WiFi back on and wait for goguardian to connect. Once it does, it will try to block this page, but when the pop-up shows, press cancel</p>
+    <p>Then try to reload the page, if it gives you a warning, it worked! Press Cancel (or press the key esc.) and carry on!</p>
+    <p>Turn the WiFi back on and wait for goguardian to connect. Once it does, it will try to block this page, but when the pop-up shows, press cancel (or esc.)</p>
+    <p>Every time you navigate to a new page, GoGuardian will try to block the page again, but just press the key esc.</p>
+    <p>Press the small button on the bottom to change the page url</p>
     <p>Press continue</p>
     <br>
     <button onclick="nextAct();"> Continue </button>
     <br>
     <p>If it says no internet, right click it and press reload frame</p>
     <p>Note: GoGuardian can still see what you're doing, it just can't interact.</p>
+    <p>Note 2: Some pages will refuse to connect, nothing I can do about that :). Just use a proxy or smth</p>
     <input id="url" placeholder="Url to go to, Leave Blank for def."></input>
   </body>
 </html>
