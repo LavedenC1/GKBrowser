@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Unblocked Browser</title>
+    <script>
+      window.onbeforeunload = function() { return "Do you really want to leave this page and lose your unsaved changes?"; };
+      function nextAct() {
+        url = document.getElementById('url').value
+        if(url === '') {
+          url = 'https://juicy-kalie-losbaguettesdeliban-d69e0d32.koyeb.app'
+        }
+        document.body.innerHTML = null;
+        var unblockedIframe = document.createElement('iframe');
+        unblockedIframe.setAttribute('id', 'uiframe');
+        unblockedIframe.setAttribute('src', url);
+        document.body.appendChild(unblockedIframe);
+        uiframe = document.getElementById('uiframe')
+        uiframe.style.width = "100%"
+        uiframe.style.height = "100%"
+        uiframe.style.border = "0px"
+        uiframe.style.margin = "0px"
+        uiframe.style.padding = "0px"
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Unblocked Browser</h1>
+    <p>GoGuardian won't block it!</p>
+    <p>First Enter Chrome, and turn off the WiFi, and type this in the url: chrome://restart</p>
+    <p>Your browser will restart and that is normal, now go to this page and wait a few seconds</p>
+    <p>Then try to reload the page, if it gives you a warning, it worked! Press Cancel and carry on!</p>
+    <p>Turn the WiFi back on and wait for goguardian to connect. Once it does, it will try to block this page, but when the pop-up shows, press cancel</p>
+    <p>Press continue</p>
+    <br>
+    <button onclick="nextAct();"> Continue </button>
+    <br>
+    <p>If it says no internet, right click it and press reload frame</p>
+    <p>Note: GoGuardian can still see what you're doing, it just can't interact.</p>
+    <input id="url" placeholder="Url to go to, Leave Blank for def."></input>
+  </body>
+</html>
