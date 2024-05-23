@@ -1,0 +1,2 @@
+# UBrowser
+Disables GoGuardian!
