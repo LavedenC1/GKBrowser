@@ -1,4 +1,4 @@
-# UBrowser
+# GKBrowser
 It's a browser where GoGuardian can't interact<br/>
 
 Inspired by my math teacher. <br/>
